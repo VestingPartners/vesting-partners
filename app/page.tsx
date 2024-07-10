@@ -105,7 +105,7 @@ const VestingPartnersDashboard = () => {
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 <DashboardCard title="INVERSIÓN VIGENTE" value="USD$ 200.000" />
-                <DashboardCard title="TASA DE INTERÉS ANUAL" value="0,8%" />
+                <DashboardCard title="TASA DE INTERÉS ANUAL" value="0,80%" />
               </div>
             </section>
 
