@@ -6,6 +6,7 @@ import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
 import { PieChart, Pie, Cell } from "recharts";
 import { Bell, ChevronDown, ChevronRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const lineChartData = [
   { name: "Jan", value: 30 },
@@ -43,18 +44,25 @@ const StatCard = ({ title, value }) => (
 export default function ProductosPage() {
   return (
     <div className="bg-gray-50 min-h-screen">
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <Image src="/vp.png" alt="Vesting Partners" width={360} height={40} />
-          <div className="flex items-center space-x-4">
-            <Bell className="h-6 w-6 text-gray-500" />
-            <div className="text-sm">
-              <p className="font-medium">Juan Pablo Roselló</p>
-              <p className="text-gray-500">Inversionista</p>
+      <Link href="/">
+        <header className="bg-white shadow-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <Image
+              src="/vp.png"
+              alt="Vesting Partners"
+              width={360}
+              height={40}
+            />
+            <div className="flex items-center space-x-4">
+              <Bell className="h-6 w-6 text-gray-500" />
+              <div className="text-sm">
+                <p className="font-medium">Juan Pablo Roselló</p>
+                <p className="text-gray-500">Inversionista</p>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </Link>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-2xl font-semibold mb-6">
@@ -63,7 +71,7 @@ export default function ProductosPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <StatCard title="Inversion total" value="US$ 5.000.000" />
-          <StatCard title="Cotalteral Total" value="US$2.000.000" />
+          <StatCard title="Colateral Total" value="US$2.000.000" />
           <StatCard title="Plazo Promedio" value="12 mes" />
         </div>
 
