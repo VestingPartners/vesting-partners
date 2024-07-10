@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from "recharts";
 import { Search, Bell, LogOut, ChevronRight, FileText } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const DashboardCard = ({ title, value }) => (
   <Card className="bg-white shadow-sm">
@@ -76,16 +77,16 @@ const VestingPartnersDashboard = () => {
     <div className="bg-gray-50 min-h-screen">
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <div className="text-xl font-semibold text-gray-800">VP</div>
+          <Image src="/vp.png" alt="Vesting Partners" width={360} height={40} />
           <div className="flex items-center space-x-4">
-            <div className="relative">
+            {/* <div className="relative">
               <input
                 type="text"
                 placeholder="Buscar"
                 className="pl-8 pr-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
               />
               <Search className="absolute left-2 top-2.5 h-5 w-5 text-gray-400" />
-            </div>
+            </div> */}
             <Bell className="h-6 w-6 text-gray-500" />
             <div className="text-sm">
               <p className="font-medium">Juan Pablo Roselló</p>
@@ -172,10 +173,13 @@ const VestingPartnersDashboard = () => {
               <InvestmentLocationMap />
             </section>
 
-            <button className="w-full mt-4 p-2 bg-gray-100 text-gray-700 rounded-md flex items-center justify-center hover:bg-gray-200 transition">
+            <Link
+              href="/productos"
+              className="w-full mt-4 p-2 bg-gray-100 text-gray-700 rounded-md flex items-center justify-center hover:bg-gray-200 transition"
+            >
               <LogOut className="h-5 w-5 mr-2" />
-              Cerrar Sesión
-            </button>
+              Detalle del fondo
+            </Link>
           </div>
         </div>
       </main>
