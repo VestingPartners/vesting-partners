@@ -69,8 +69,8 @@ export default function ProductosPage() {
         <h1 className="text-2xl font-semibold mb-6">Cartera/Vesting Inc</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <StatCard title="Equity Total" value="US$ 5.000.000" />
-          <StatCard title="Colaterales Totales" value="US$2.000.000" />
+          <StatCard title="Equity Total" value="US$ 3.000.000" />
+          <StatCard title="Colaterales Totales" value="US$3.000.000" />
           <StatCard title="Vencimiento Promedio Cartera" value="12 Meses" />
         </div>
 
