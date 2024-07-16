@@ -4,9 +4,10 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer } from "recharts";
 import { PieChart, Pie, Cell } from "recharts";
-import { Bell, ChevronDown, ChevronRight } from "lucide-react";
+import { Bell, ChevronDown, ChevronRight, Home } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const lineChartData = [
   { name: "Jan", value: 30 },
@@ -48,15 +49,26 @@ export default function ProductosPage() {
       <Link href="/">
         <header className="bg-white shadow-sm">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <Image
-              src="/vp.png"
-              alt="Vesting Partners"
-              width={360}
-              height={40}
-            />
             <div className="flex items-center space-x-4">
+              <Image
+                src="/vp.png"
+                alt="Vesting Partners"
+                width={240}
+                height={40}
+              />
+            </div>
+            <div className="flex items-center space-x-4">
+              <Link
+                href="/"
+                className="  text-sm font-medium flex items-center "
+              >
+                <Button variant="outline">
+                  <Home className="mr-2 h-4 w-4" />
+                  Inicio
+                </Button>
+              </Link>
               <Bell className="h-6 w-6 text-gray-500" />
-              <div className="text-sm">
+              <div className="text-sm text-right">
                 <p className="font-medium">Juan Pablo Roselló</p>
                 <p className="text-gray-500">Inversionista</p>
               </div>
