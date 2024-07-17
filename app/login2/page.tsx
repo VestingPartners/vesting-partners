@@ -4,27 +4,27 @@ import Image from "next/image";
 
 export default function Login() {
   return (
-    <div className="flex h-screen">
-      {/* Left side - Full-screen Image */}
-      <div className="hidden lg:block w-1/2 relative">
-        <Image
-          src="/Vesting Partners.png"
-          layout="fill"
-          objectFit="cover"
-          alt="Vesting Partners"
-          priority
-        />
-        <div className="absolute bottom-4 left-4 text-white text-lg font-semibold">
-          Vesting Partners
-        </div>
-      </div>
+    <div className="relative h-screen w-full flex items-center justify-center">
+      {/* Full-screen background image */}
+      <Image
+        src="/Vesting Partners.png"
+        layout="fill"
+        objectFit="cover"
+        alt="Background"
+        priority
+        className="z-0"
+      />
 
-      {/* Right side - Login Form */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-8 bg-gray-50">
+      {/* Centered login form with semi-transparent background */}
+      <div className="z-10 w-full max-w-md px-6 py-8 bg-white bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg shadow-lg">
         <div className="w-full max-w-md">
-          <h1 className="text-2xl font-semibold text-[#25567c] mb-8 text-center">
-            VESTING PARTNERS
-          </h1>
+          <Image
+            src="/vp.png"
+            width={300}
+            height={300} // Asegúrate de que estos valores mantienen la relación de aspecto de la imagen original
+            alt="Logo de Capital Storage"
+            className="mx-auto my-4 max-w-xs sm:max-w-sm md:max-w-md" // Ajusta las clases de tamaño máximo para diferentes pantallas
+          />
 
           <div className="bg-white p-8 rounded-lg shadow-sm w-full">
             <h2 className="text-xl mb-6 text-center">
